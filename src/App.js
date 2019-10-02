@@ -1,26 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
+import {Route,Switch} from 'react-router';
+
+import About from './components/About/About';
+import Skills from './components/Skills/Skills';
+import Portfolio from './components/Portfolio/Portfolio';
+import Home from './components/Home/Home';
+import Connect from './components/Connect/Connect';
+import Layout from './hoc/Layout/Layout';
+
 import './App.css';
 
-function App() {
-  return (
+class App extends React.Component{
+
+  render() {
+    return(
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Layout>
+        <Switch>
+          <Route path='/about' component={About}/>
+          <Route path='/skills' component={Skills}/>
+          <Route path='/portfolio' component={Portfolio}/>
+          <Route path='/connect' component={Connect}/>
+          <Route path='/' component={Home}/>
+        </Switch>
+      </Layout>
     </div>
-  );
+    );
+  };
 }
 
 export default App;
