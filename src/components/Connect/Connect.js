@@ -1,7 +1,5 @@
-import React,{Component} from 'react';
+import React from 'react';
 
-class Connect extends Component
-{
+let Connect=(props)=>(<div>You're at Connect page</div>);
 
-}
 export default Connect;

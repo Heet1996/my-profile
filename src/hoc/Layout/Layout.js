@@ -1,16 +1,14 @@
-import React,{Component} from 'react';
+import React from 'react';
+import './Layout.scss';
 import Aux from '../Auxillary/Auxillarly';
 import Header from '../../components/Navigation/Header/Header';
 
-class Layout extends Component
-{
-    render()
-    {
-        return(
-            <Aux>
-                <Header />
-            </Aux>
-        );
-    }
-}
+
+let Layout=(props)=>(
+                    <div className="layout-body">
+                    <Header/>
+                    {props.children}
+                    </div>
+                    );
+
 export default Layout;

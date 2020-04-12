@@ -1,7 +1,5 @@
-import React,{Component} from 'react';
+import React from 'react';
 
-class Skills extends Component
-{
+let Skills=(props)=>(<div>You're at Skill page</div>)
 
-}
 export default Skills;

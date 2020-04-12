@@ -1,0 +1,35 @@
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation
+{
+    
+
+    &__list
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__item
+    {
+        list-style: none;
+    }
+    &__link
+    {
+        font-size: 1.7rem; 
+        color: black;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
+        padding: 1rem;
+            &:hover
+            {
+                color:white;
+                background-color:rgba(15, 118, 214, 0.993);
+            }  
+    }
+
+}

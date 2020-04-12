@@ -1,23 +1,38 @@
 import React,{Component} from 'react';
-import classes from './Header.css';
-
+import './Header.scss';
+import {Link} from 'react-router-dom';
+import Logo from '../../UI/Logo';
+import {typeString} from '../../Home/Home';
 class Header extends Component
 {
     render()
     {
         return(
-            <div className="navigation">
-                <nav className={classes.navigation_name}>
-                    <ul>
-                        <li className={classes.navigation__item}><a href="/" className="navigation__link">Home</a></li>
-                        <li className={classes.navigation__item}><a href="/about" className="navigation__link">About Me</a></li>
-                        <li className={classes.navigation__item}><a href="/portfolio" className="navigation__link">Portfolio</a></li>
-                        <li className={classes.navigation__item}><a href="/skills" className="navigation__link">Skills</a></li>
-                        <li className={classes.navigation__item}><a href="/connect" className="navigation__link">Connect</a></li>
+                <header className="header">
+                <Logo />
+                <nav className="navigation">
+                
+                    <ul className="navigation__list">
+                        <li className="navigation__item" onClick={typeString}>
+                            <Link to="/" className="navigation__link">Home</Link>
+                        </li>
+                        <li className="navigation__item">
+                            <Link to="/about" className="navigation__link">About Me</Link>
+                        </li>
+                        <li className="navigation__item">
+                            <Link to="/portfolio" className="navigation__link">Portfolio</Link>
+                        </li>
+                        <li className="navigation__item">
+                            <Link to="/skills" className="navigation__link">Skills</Link>
+                        </li>
+                        <li className="navigation__item">
+                            <Link to="/connect" className="navigation__link">Connect</Link>
+                        </li>
 
                     </ul>
                 </nav>
-            </div>
+                </header>
+            
         );
     }
 }

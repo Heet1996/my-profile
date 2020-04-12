@@ -1,0 +1,62 @@
+.home
+{
+    font-size: 1.6rem;  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 500px;
+}
+.profile-image
+{
+     & img
+    {
+        width:12rem;
+        height: 12rem;
+        border: 3px solid black;
+        margin-bottom: 2rem;
+    }
+}
+.social-network
+{
+    display: flex;
+    justify-content: space-evenly; 
+    width:14rem;
+    & img
+    {
+        width:2.5rem;
+        height: 2.5rem;
+        margin-bottom: 1rem;
+        transition: 0.3s;
+
+        &:hover
+        {
+            transform: translate(0, -8px);
+        }
+    }
+}
+.intro
+{
+        width: 100%;
+        text-align: center;
+        &__list
+        {
+            list-style: none;
+            margin-top: 1rem;
+            &__item
+            {
+                margin: 1rem 0 1rem 0rem;
+                padding: 2rem 0.5rem 2rem 0.5rem;
+                &>*
+                {
+                    background-color: white;
+                    display: inline-block;
+                }
+            }
+        }
+        
+}
