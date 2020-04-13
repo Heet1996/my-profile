@@ -1,6 +1,7 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React,{useState} from 'react';
+import {Link,Route} from 'react-router-dom';
 import './Portfolio.scss';
+
 const topics = [
     {
       name: 'React-JS',
@@ -10,7 +11,7 @@ const topics = [
           name: 'Burger Builder',
           id: 'burger-builder',
           description: "A react-redux application where you can order your customize builder",
-          technology:["React","React-Redux","Axios","Firebase Database","Firebase host"],
+          technology:["React","React-Redux","Axios"],
           code: 'https://github.com/Heet1996/BurgerBuilder',
           link:'https://react-burgerbuilder-a3bac.web.app/'
         },
@@ -18,7 +19,7 @@ const topics = [
             name: 'Git Finder',
             id: 'git-finder',
             description: "A GraphQL client application to search, star and watch your favourite repository",
-            technology:["React","React-Redux","GraphQL","Firebase host","React-Router"],
+            technology:["React","React-Redux","GraphQL"],
             code: 'https://github.com/Heet1996/GitHubApi',
             link:'https://githubrepo-cc932.firebaseapp.com/'
           },
@@ -54,7 +55,7 @@ const topics = [
           name: 'Chat Room',
           id: 'chatroom',
           description: 'User can creat or join a chat room and send their location',
-          technology:["NodeJS","ExpressJS","Socket.io","Google Maps API"],
+          technology:["NodeJS","ExpressJS","Socket.io"],
           code: 'https://github.com/Heet1996/node-chat-api',
           url:'https://sheltered-taiga-76776.herokuapp.com/'
         },
@@ -62,7 +63,7 @@ const topics = [
           name: 'Online Shopping',
           id: 'onlineshopping',
           description: 'An online shopping cart integrated with stripe for payment',
-          technology:["NodeJS","ExpressJS","EJS","Stripe API"],
+          technology:["NodeJS","EJS","Stripe API"],
           code: 'https://github.com/Heet1996/NodeJS',
           url:'https://github.com/Heet1996/NodeJS'
         }
@@ -91,53 +92,49 @@ const topics = [
         ]
       }
   ]
+
 let Portfolio=(props)=>{
-  
-  
+  let [pro,setPro]=useState('React');  
+  let Project=({match})=>{
+
+    let proId=match.params.id || 'React';
+    setPro(proId);
+    let project=topics.find(({id})=>id==proId);
+    return project['projects']
+                .map((el)=>{
+                  return (<div className="flip-card" key={el.id}>
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <h3>{el.name}</h3>
+                                    <p>{el.description}</p>
+                                    <p>
+                                      {el.technology.map((item)=>item+', ')}
+                                    </p>
+                                </div>
+                                <div className="flip-card-back">
+                                    <a href={el.code} target="_blank">Code</a>
+                                    <a href={el.url} target="_blank">View Site</a>
+                                </div>
+                            </div>   
+                          </div>)
+                })
+  }
   let nav=(topics.map(({name,id})=>{
-    return (<li key={id} className="navigation-1__item">
-        <Link to={`/project/${id}`} className="navigation-1__link">{name}</Link> 
+    
+    return (<li key={id} className={`navigation-1__item ${pro==id ? 'active' :null}`}>
+        <Link to={`/portfolio/${id}`} className={`navigation-1__link`}>{name}</Link> 
     </li>)
   }));
-  let projectsList=(
-    <>
-    <div className="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                
-            </div>
-            <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
-            </div>
-        </div>   
-    </div>
-    <div className="flip-card">
-        <div class="flip-card-inner">
-            <div class="flip-card-front">
-                
-            </div>
-            <div class="flip-card-back">
-                <h1>John Doe</h1>
-                <p>Architect & Engineer</p>
-                <p>We love that guy</p>
-            </div>
-        </div>   
-    </div>
-  </>
-  );
-
-  let container=(
+    let container=(
               <div className="project">
-                <Route  />
                 <nav className="navigation-1">
                       <ul className="navigation-1__list">
                         {nav}    
                       </ul>
                 </nav>
                 <div className="projects">
-                        {projectsList}
+                      <Route path='/portfolio/:id' component={Project}></Route>
+                      <Route exact path='/portfolio' component={Project}></Route>
                 </div>
               </div>
               ) 
