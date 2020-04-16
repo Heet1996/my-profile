@@ -7,20 +7,25 @@
     top:50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    margin-top: 3rem;
+    
   
     &-section
     {
         max-width: 45rem;
         font-size: 2rem;
         align-self: center;
-              
-        &__desc>p
+        &__desc
         {
-           margin-block-end:20px;
-           text-align: justify; 
-
-        }
+            margin-top:5rem;
+             &>p
+             {
+                
+                    margin-block-end:20px;
+                    text-align: justify; 
+            }  
+        }     
+       
+       
     }
 }
 

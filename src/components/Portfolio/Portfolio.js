@@ -10,7 +10,7 @@ const topics = [
         {
           name: 'Burger Builder',
           id: 'burger-builder',
-          description: "A react-redux application where you can order your customize builder",
+          description: "Order your customize burger",
           technology:["React","React-Redux","Axios"],
           code: 'https://github.com/Heet1996/BurgerBuilder',
           link:'https://react-burgerbuilder-a3bac.web.app/'
@@ -103,19 +103,20 @@ let Portfolio=(props)=>{
     return project['projects']
                 .map((el)=>{
                   return (<div className="flip-card" key={el.id}>
-                            <div className="flip-card-inner">
+                            
                                 <div className="flip-card-front">
-                                    <h3>{el.name}</h3>
-                                    <p>{el.description}</p>
+                                    <h3 className="card-title">{el.name}</h3>
+                                    <p className="card-description">{el.description}</p>
                                     <p>
-                                      {el.technology.map((item)=>item+', ')}
+                                      {el.technology.map((item)=><span>{item+', '}</span>)}
                                     </p>
-                                </div>
-                                <div className="flip-card-back">
+                                    <div className="flip-card-btnDiv">
                                     <a href={el.code} target="_blank">Code</a>
                                     <a href={el.url} target="_blank">View Site</a>
+                                    </div>
                                 </div>
-                            </div>   
+                                
+                             
                           </div>)
                 })
   }

@@ -39,12 +39,15 @@ ORDER: Base + typography > general layout + grid > page layout > components
 {
   --background-container: rgba(96, 176, 244,0.8); 
   font-size:62.5%;
+  @include respond(phone){    //width<900
+    font-size:45%;          //1 rem =8px  viz. 50%
+ }
+  @include respond(tab-port){    //width<900
+    font-size:50%;          //1 rem =8px  viz. 50%
+ }
   @include respond(tab-land){   //width<1200 
     font-size:56.25%;          //1 rem=9px viz. 9/16
  } 
- @include respond(tab-port){    //width<900
-      font-size:50%;          //1 rem =8px  viz. 50%
-   }
    @include respond(desk){     
       font-size:75%;          //1 rem = 12px viz. 12/16
    }
