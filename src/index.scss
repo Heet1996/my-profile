@@ -20,6 +20,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 */
 //mixins
 @mixin respond($breakpoint) {
+  @if $breakpoint==small-phone{
+    @media (max-width: 25em) {@content};
+    }
   @if $breakpoint==phone{
   @media (max-width: 37.5em) {@content};
   }
@@ -39,6 +42,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
 {
   --background-container: rgba(96, 176, 244,0.8); 
   font-size:62.5%;
+  @include respond(small-phone){    //width<400
+    font-size:30%;          //1 rem =8px  viz. 50%
+ }
   @include respond(phone){    //width<900
     font-size:45%;          //1 rem =8px  viz. 50%
  }
@@ -56,12 +62,13 @@ ORDER: Base + typography > general layout + grid > page layout > components
 
 body {
   margin: 0;
+  font-size: 1.6rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size:1.6rem;
+  
 
 }
 *, *::before, *::after {

@@ -10,8 +10,14 @@ class Header extends Component
         return(
                 <header className="header">
                 <Logo />
-                <nav className="navigation">
+                <div className="menu-toggle" id="toogle">
+                            <div className="line"></div>
+                            <div className="line"></div>
+                </div>    
                 
+                <nav className="navigation" id="js-menu">
+
+                    <a href="#" className="close" id="close"></a>
                     <ul className="navigation__list">
                         <li className="navigation__item" onClick={typeString}>
                             <Link to="/" className="navigation__link">Home</Link>
@@ -30,14 +36,24 @@ class Header extends Component
                         </li>
 
                     </ul>
-                    <div class="menu-toggle">
-                        <div class="line"></div>
-                        <div class="line"></div>
-				    </div>
                 </nav>
                 </header>
             
         );
     }
 }
+// //JS for maain menu to toogle
+document.addEventListener('DOMContentLoaded',()=>{
+
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('toogle');
+    let navBarClose= document.getElementById('close');
+    navBarToggle.addEventListener('click', function () {
+     mainNav.classList.toggle('activeNav');
+    });
+    mainNav.addEventListener('click', function () {
+        mainNav.classList.toggle('activeNav');
+       });
+});
+
 export default Header;

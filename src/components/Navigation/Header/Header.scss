@@ -32,35 +32,74 @@
     }
 
 }
-
-
-
 /* Mobile Code for header */
 
 @media screen and (max-width: 700px)
 {
-    .line{
-        width: 30px;
-        height: 2px;
-        margin: 10px 0;
-        background-color: #fff;
-    }
-    .menu-toggle:hover{
-        cursor: pointer;
-    }
-    .mobile-nav ul{
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-    }
     
+ 
     .navigation
     {
+        background-color: #3C3842;
+        display: block;
+        width: 100%;
+        height: 100%;
+        display: none;
+        text-align: center;
+        position: absolute;
+        top:0;
+        left: 0;
+        z-index: 100;
         & ul
         {
             padding: 0;
             margin: 0;
             list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+        }
+        &__link
+        {
+            color: #989AA4;
+            display: block;
+            padding: 15px 20px;
         }
     }
+    .line{
+        width: 30px;
+        height: 2px;
+        margin: 10px 0;
+        background-color:black;
+    }
+    .menu-toggle{
+        cursor: pointer;
+    }
+    .activeNav
+    {
+        display: block;
+    }
+    .close {
+        position: absolute;
+        right: 32px;
+        top: 32px;
+        width: 32px;
+        height: 32px;
+        
+      }
+      .close:before, .close:after {
+        position: absolute;
+        left: 15px;
+        content: ' ';
+        height: 33px;
+        width: 2px;
+        background-color: #fff;
+      }
+      .close:before {
+        transform: rotate(45deg);
+      }
+      .close:after {
+        transform: rotate(-45deg);
+      }
 }
