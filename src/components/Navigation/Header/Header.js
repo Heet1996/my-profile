@@ -30,6 +30,10 @@ class Header extends Component
                         </li>
 
                     </ul>
+                    <div class="menu-toggle">
+                        <div class="line"></div>
+                        <div class="line"></div>
+				    </div>
                 </nav>
                 </header>
             

@@ -13,7 +13,7 @@ const topics = [
           description: "Order your customize burger",
           technology:["React","React-Redux","Axios"],
           code: 'https://github.com/Heet1996/BurgerBuilder',
-          link:'https://react-burgerbuilder-a3bac.web.app/'
+          url:'https://react-burgerbuilder-a3bac.web.app/'
         },
         {
             name: 'Git Finder',
@@ -21,7 +21,7 @@ const topics = [
             description: "A GraphQL client application to search, star and watch your favourite repository",
             technology:["React","React-Redux","GraphQL"],
             code: 'https://github.com/Heet1996/GitHubApi',
-            link:'https://githubrepo-cc932.firebaseapp.com/'
+            url:'https://githubrepo-cc932.firebaseapp.com/'
           },
       ]
     },

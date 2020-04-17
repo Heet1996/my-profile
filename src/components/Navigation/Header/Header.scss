@@ -3,11 +3,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .navigation
 {
-    
-
     &__list
     {
         display: flex;
@@ -32,4 +31,36 @@
             }  
     }
 
+}
+
+
+
+/* Mobile Code for header */
+
+@media screen and (max-width: 700px)
+{
+    .line{
+        width: 30px;
+        height: 2px;
+        margin: 10px 0;
+        background-color: #fff;
+    }
+    .menu-toggle:hover{
+        cursor: pointer;
+    }
+    .mobile-nav ul{
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+    }
+    
+    .navigation
+    {
+        & ul
+        {
+            padding: 0;
+            margin: 0;
+            list-style-type: none;
+        }
+    }
 }

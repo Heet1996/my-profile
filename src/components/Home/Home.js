@@ -64,5 +64,16 @@ export let typeString=()=>{
     setTimeout(dynamicCreate.bind(this,"connect","Let's get in touch"),5000);
 }
 
-document.addEventListener('DOMContentLoaded',typeString);
+document.addEventListener('DOMContentLoaded',()=>{
+
+    typeString();
+
+    //JS for maain menu to toogle
+    let mainNav = document.getElementById('js-menu');
+    let navBarToggle = document.getElementById('js-navbar-toggle');
+
+    navBarToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('active');
+    });
+});
 export default Home;
