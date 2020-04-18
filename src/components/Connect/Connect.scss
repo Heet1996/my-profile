@@ -24,17 +24,21 @@
     {
         width: inherit;
         text-align: center;
+        animation: top-down 1s 1;
+        position: relative;
     }
     &-footer
     {
         display: flex;
         justify-content: center;
         list-style: none;
+        position: relative;
         & li
         {
             display: list-item;
             margin-left: 3rem;
         }
+        animation: bottom-up 1s 1;
     }
    
 }
@@ -70,4 +74,15 @@
     transition: all 0.3s ease 0s;
     color: rgb(255, 255, 255);
 
+}
+
+@keyframes bottom-up
+{
+    0%{top:10%};
+    100%{top:0%};
+}
+@keyframes top-down
+{
+    0%{top:-10%};
+    100%{top:0%};
 }

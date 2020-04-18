@@ -8,7 +8,7 @@
     left: 50%;
     transform: translate(-50%,-50%);
     margin-top:5rem;
-  
+    animation: myfirst 1s 1;
     &-section
     {
         max-width: 45rem;
@@ -29,3 +29,7 @@
     }
 }
 
+@keyframes myfirst {
+    0%   {left: 30%;}
+    100% {left:50%;}
+  }
