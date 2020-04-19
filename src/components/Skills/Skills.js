@@ -12,9 +12,8 @@ let Skills=(props)=>(
                                 <li>React-Redux</li>
                                 <li>JavaScript ES6</li>
                                 <li>Node JS</li>
-                                <li>GitHub</li>
-                                <li>CSS3</li>
-                                <li>HTML</li>
+                                <li>WordPress</li>
+                                <li>GraphQL</li>
                             </ul>
                         </div>
                         <div className="border"></div>
@@ -25,8 +24,8 @@ let Skills=(props)=>(
                                 <li>PHP</li>
                                 <li>Selenium</li>
                                 <li>Java</li>
-                                <li>Bootstrap</li>
-                                <li>Materliase CSS</li>
+                                <li>Bootstrap</li> 
+                                <li>CSS3/SCSS</li>
                             </ul>
                         </div>
                 </div>
