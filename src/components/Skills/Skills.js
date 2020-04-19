@@ -25,7 +25,7 @@ let Skills=(props)=>(
                                 <li>Selenium</li>
                                 <li>Java</li>
                                 <li>Bootstrap</li> 
-                                <li>CSS3/SCSS</li>
+                                <li>CSS3/SASS</li>
                             </ul>
                         </div>
                 </div>
