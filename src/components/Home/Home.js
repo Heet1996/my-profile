@@ -1,7 +1,43 @@
 import React from 'react';
 import './Home.scss';
 
-let Home=(props)=>(
+let dynamicCreate=(id,content)=>{
+    
+    let i=0;
+    if(document.getElementById(id))
+    document.getElementById(id).innerHTML="";
+    let typeWriter=()=>{
+
+        if(i<content.length && document.getElementById(id))
+        {
+            document.getElementById(id).innerHTML += content.charAt(i++);
+            setTimeout(typeWriter, 50);
+        }
+    } 
+    typeWriter();
+
+    }
+
+
+export let typeString=()=>{
+    
+        var id = window.setTimeout(function() {}, 0);
+        while (id--) 
+        window.clearTimeout(id); // will do nothing if no timeout with id is present
+        setTimeout(dynamicCreate.bind(this,"greeting","Hi there!"),1000);
+        setTimeout(dynamicCreate.bind(this,"intro","I'm Heet, a JavaScript Developer living in Mumbai, India."),2000);
+        setTimeout(dynamicCreate.bind(this,"connect","Let's get in touch"),5000);
+    
+   
+}
+let Home=(props)=>{
+    
+    let path=props.match.path;
+    let {isExact}=props.match;
+    if(path && isExact)
+    typeString();
+    
+    return (
     
     <div className="home"> 
        
@@ -38,34 +74,6 @@ let Home=(props)=>(
             </ul>
         </div>
     </div>
-)
-let dynamicCreate=(id,content)=>{
-    
-    let i=0;
-    if(document.getElementById(id))
-    document.getElementById(id).innerHTML="";
-    let typeWriter=()=>{
+)}
 
-        if(i<content.length && document.getElementById(id))
-        {
-            document.getElementById(id).innerHTML += content.charAt(i++);
-            setTimeout(typeWriter, 50);
-        }
-    } 
-    typeWriter();
-
-    
-}
-
-export let typeString=()=>{
-    
-    setTimeout(dynamicCreate.bind(this,"greeting","Hi there!"),1000);
-    setTimeout(dynamicCreate.bind(this,"intro","I'm Heet, a JavaScript Developer living in Mumbai, India."),2000);
-    setTimeout(dynamicCreate.bind(this,"connect","Let's get in touch"),5000);
-}
-
-document.addEventListener('DOMContentLoaded',()=>{
-
-    typeString();
-});
 export default Home;

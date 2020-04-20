@@ -26,6 +26,7 @@
 {
     display: flex;
     justify-content: space-evenly; 
+    -webkit-justify-content:space-evenly;
     width:14rem;
     & img
     {
