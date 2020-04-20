@@ -16,6 +16,11 @@
     &__item
     {
         list-style: none;
+        & a
+        {
+            text-decoration: none;
+            list-style-type: none;
+        }
     }
     &__link
     {
@@ -68,6 +73,7 @@
             font-size: 2.5rem;
             list-style-type: none;
             text-decoration: none;
+
             
         }
     }
