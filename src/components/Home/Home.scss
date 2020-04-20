@@ -1,6 +1,6 @@
 .home
 {
-    font-size: 1.6rem;  
+      
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -44,6 +44,7 @@
 {
         width: 100%;
         text-align: center;
+        font-size: 2rem;
         &__list
         {
             list-style: none;

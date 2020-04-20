@@ -24,6 +24,8 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+
+        
     }
     &__item
     {
@@ -34,10 +36,16 @@
         color:black;
         text-align: center;
         padding: 1rem;
+         & a
+         {
+            list-style-type: none;
+            text-decoration: none;
+         }   
         &:hover
         {
             color:white;
             background-color:dodgerblue;
+            
         }
     }
     &__link
@@ -51,12 +59,15 @@
             &
             {
                 margin: 3rem 0;  
+                
             }
             &__list
             {
                 flex-direction: row;
                 width: 100%;
                 justify-content: space-evenly;
+                
+                
                
             }
     }

@@ -22,14 +22,14 @@ let Skills=(props)=>(
                             <ul>
                                 <li>Angular JS</li>
                                 <li>PHP</li>
-                                <li>Selenium</li>
+                                <li>Selenium</li>   
                                 <li>Java</li>
                                 <li>Bootstrap</li> 
                                 <li>CSS3/SASS</li>
                             </ul>
                         </div>
                 </div>
-               <a href={Pdf} target="_blank"><button className="button button--ujarak button--border-thin button--text-thick button--inverted">Resume</button></a>
+               <a href={Pdf} target="_blank" rel="noopener noreferrer"><button className="button button--ujarak button--border-thin button--text-thick button--inverted">Resume</button></a>
             </div>
 )
 

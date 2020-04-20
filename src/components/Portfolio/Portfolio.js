@@ -99,7 +99,7 @@ let Portfolio=(props)=>{
 
     let proId=match.params.id || 'React';
     setPro(proId);
-    let project=topics.find(({id})=>id==proId);
+    let project=topics.find(({id})=>id===proId);
     return project['projects']
                 .map((el)=>{
                   return (<div className="flip-card" key={el.id}>
@@ -108,11 +108,11 @@ let Portfolio=(props)=>{
                                     <h3 className="card-title">{el.name}</h3>
                                     <p className="card-description">{el.description}</p>
                                     <p>
-                                      {el.technology.map((item)=><span>{item+', '}</span>)}
+                                      {el.technology.map((item)=><span key={item+Math.random()}>{item+', '}</span>)}
                                     </p>
                                     <div className="flip-card-btnDiv">
-                                    <a href={el.code} target="_blank">Code</a>
-                                    <a href={el.url} target="_blank">View Site</a>
+                                    <a href={el.code} target="_blank" rel="noopener noreferrer">Code</a>
+                                    <a href={el.url} target="_blank" rel="noopener noreferrer">View Site</a>
                                     </div>
                                 </div>
                                 
@@ -122,7 +122,7 @@ let Portfolio=(props)=>{
   }
   let nav=(topics.map(({name,id})=>{
     
-    return (<li key={id} className={`navigation-1__item ${pro==id ? 'active' :null}`}>
+    return (<li key={id} className={`navigation-1__item ${pro===id ? 'active' :null}`}>
         <Link to={`/portfolio/${id}`} className={`navigation-1__link`}>{name}</Link> 
     </li>)
   }));

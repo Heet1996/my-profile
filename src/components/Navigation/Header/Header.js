@@ -17,7 +17,7 @@ class Header extends Component
                 
                 <nav className="navigation" id="js-menu">
 
-                    <a href="#" className="close" id="close"></a>
+                    <a href="#" className="close" id="close"> </a>
                     <ul className="navigation__list">
                         <li className="navigation__item" onClick={typeString}>
                             <Link to="/" className="navigation__link">Home</Link>
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     let mainNav = document.getElementById('js-menu');
     let navBarToggle = document.getElementById('toogle');
-    let navBarClose= document.getElementById('close');
+    
     navBarToggle.addEventListener('click', function () {
      mainNav.classList.toggle('activeNav');
     });
