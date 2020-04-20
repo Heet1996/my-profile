@@ -39,7 +39,13 @@
         {
             display: list-item;
             margin-left: 3rem;
+            & a
+            {
+                list-style: none;
+                text-decoration: none;
+            }
         }
+
         animation: bottom-up 1s 1;
     }
    
@@ -51,8 +57,7 @@
     padding: 5px 8px;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
-    list-style-type: none;
-    text-decoration: none;
+    
 }
 .github
 {
@@ -61,8 +66,7 @@
     padding: 5px 8px;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
-    list-style-type: none;
-    text-decoration: none;
+    
 }
 .facebook
 {
@@ -71,8 +75,7 @@
     padding: 5px 8px;
     border-radius: 3px;
     transition: all 0.3s ease 0s;
-    list-style-type: none;
-    text-decoration: none;
+    
 }
 .linkedin
 {
@@ -81,8 +84,7 @@
     border-radius: 3px;
     transition: all 0.3s ease 0s;
     color: rgb(255, 255, 255);
-    list-style-type: none;
-    text-decoration: none;
+    
 
 }
 
