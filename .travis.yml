@@ -6,4 +6,4 @@ before_install:
   - docker build -t heet1996/my-profile -f Dockerfile.dev .
 
 script:
-  -docker run heet1996/my-profile npm run test -- --coverage
+  - docker run heet1996/my-profile npm run test -- --coverage
