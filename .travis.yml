@@ -15,11 +15,8 @@ deploy:
   env: "MyProfile-env"
   bucket_name: "elasticbeanstalk-us-east-1-413920612934"
   bucket_path: "My-profile"
-  branches:
-    only:
-      - master
-  access_key_id: 
-    secure:"Encrypted <AWS_ACCESS_KEY>="
-  secret_access_key:
-    secure:"Encrypted  <AWS_SECRET_KEY>="
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
     
