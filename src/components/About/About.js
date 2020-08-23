@@ -15,7 +15,7 @@ let About = (props) => (
 						rel="noopener noreferrer"
 					>
 						MakeStories
-					</a>
+					</a>{" "}
 					and formerly an Automation Test Engineer at Barclays and was
 					a Full Stack Web Developer at Ascent Future Tech. I've
 					completed my Bachelors in Computer Science from VJTI, Mumbai
