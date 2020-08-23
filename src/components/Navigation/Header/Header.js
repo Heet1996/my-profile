@@ -16,8 +16,8 @@ class Header extends Component
                 </div>    
                 
                 <nav className="navigation" id="js-menu">
-
-                    <a href="#" className="close" id="close"> </a>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}    
+                    <a href="#" className="close" id="close" rel="noopener noreferrer"> </a>
                     <ul className="navigation__list">
                         <li className="navigation__item" onClick={typeString}>
                             <Link to="/" className="navigation__link">Home</Link>
