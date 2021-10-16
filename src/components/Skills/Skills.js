@@ -1,6 +1,5 @@
 import React from 'react';
 import './Skills.scss';
-import Pdf from '../../Heet_Shah_Resume_New.pdf';
 let Skills=(props)=>(
             <div className="skills">
                 <h3 className="skills-h3">Technology Skills</h3>
