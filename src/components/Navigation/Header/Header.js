@@ -26,7 +26,7 @@ class Header extends Component
                             <Link to="/about" className="navigation__link">About Me</Link>
                         </li>
                         <li className="navigation__item">
-                            <Link to="/portfolio" className="navigation__link">Portfolio</Link>
+                            <Link to="/work-experience" className="navigation__link">Experience</Link>
                         </li>
                         <li className="navigation__item">
                             <Link to="/skills" className="navigation__link">Skills</Link>
