@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import "./Connect.scss";
 let Connect=(props)=>(
 <div className="connect">
@@ -31,8 +31,7 @@ let Connect=(props)=>(
                 </a>
                 </li>   
                 </ul>
-        
-
-</div>);
+	</div>
+);
 
 export default Connect;

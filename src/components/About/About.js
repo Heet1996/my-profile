@@ -1,13 +1,13 @@
-import React from 'react';
-import './About.scss';
-import {Link} from 'react-router-dom';
+import React from "react";
+import "./About.scss";
+import { Link } from "react-router-dom";
 
 let About=(props)=>(
     <div className="about">
             <div className="about-section">
                 <div className="about-section__desc">
                 <p>Hi, I'm Heet Shah.</p>
-                <p>Currently I'm working as a Backend Engineer at <a href="http://godutchpay.in">GoDutch</a> and previously worked at <a href="https://beta.makestories.io/">MakeStories</a> as a Full Stack Developer. 
+                <p>Currently I'm working as a Backend Engineer at <a href="http://godutchpay.in" target="_blank" rel="noopener noreferrer">GoDutch</a> and previously worked at <a href="https://makestories.io" target="_blank" rel="noopener noreferrer">MakeStories</a> as a Full Stack Developer. 
                 I've completed my Bachelors in Computer Science from VJTI, Mumbai in 2018 and my love to Web programming started during my college days.
                 </p>
                 <p>
